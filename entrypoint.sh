@@ -2,9 +2,9 @@
 
 # 定义 UUID 及 伪装路径,请自行修改.(注意:伪装路径以 / 符号开始,为避免不必要的麻烦,请不要使用特殊符号.)
 base64 -d config > config.json
-UUID=${UUID:-'6c0abcfb-3d93-4495-9b45-2be43b9e1c85'}
-VMESS_WSPATH=${VMESS_WSPATH:-'/6c0abcfb-3d93-4495-9b45-2be43b9e1c85-vmess'}
-VLESS_WSPATH=${VLESS_WSPATH:-'/6c0abcfb-3d93-4495-9b45-2be43b9e1c85-vless'}
+UUID=${UUID:-'825f8ec3-7177-41a2-8899-669ab6ea8f67'}
+VMESS_WSPATH=${VMESS_WSPATH:-'/825f8ec3-7177-41a2-8899-669ab6ea8f67-vmess'}
+VLESS_WSPATH=${VLESS_WSPATH:-'/825f8ec3-7177-41a2-8899-669ab6ea8f67-vless'}
 sed -i "s#UUID#$UUID#g;s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g" config.json
 sed -i "s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g" /etc/nginx/nginx.conf
 sed -i "s#RELEASE_RANDOMNESS#${RELEASE_RANDOMNESS}#g" /etc/supervisor/conf.d/supervisord.conf
